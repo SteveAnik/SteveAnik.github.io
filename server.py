@@ -1,17 +1,22 @@
-import http.server
-import socketserver
+from flask import Flask, request, jsonify
+import os
 
-PORT = 8000
 
-class Handler(http.server.SimpleHTTPRequestHandler):
-    def end_headers(self):
-        self.send_header('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0')
-        self.send_header('Pragma', 'no-cache')
-        self.send_header('Expires', '0')
-        super().end_headers()
+app = Flask(__name__, static_folder='static')
 
-handler = Handler
+# Serve the static index.html   
+@app.route('/', methods=['GET'])
+def serve_index():
+    return app.send_static_file('index.html')
 
-with socketserver.TCPServer(("", PORT), handler) as httpd:
-    print(f"Serving at http://localhost:{PORT}")
-    httpd.serve_forever()
+# Handle POST requests from the front-end
+@app.route('/', methods=['POST'])
+def handle_post():
+    data = request.get_json()
+    user_message = data.get('userMessage', 'No message provided')
+    
+    return jsonify({"response"})
+
+if __name__ == '__main__':
+    port = int(os.environ.get('PORT', 8000))
+    app.run(host='0.0.0.0', port=port)
