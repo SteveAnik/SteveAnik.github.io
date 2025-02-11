@@ -1,0 +1,68 @@
+/* Dark Theme with Red, Dark Blue, and Dark Violet */
+body {
+    background: linear-gradient(to right, #0D0D0D, #1A1A2E, #16213E);
+    color: #EAEAEA;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #111;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FF004D;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #EAEAEA;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #FF004D;
+}
+
+section {
+    padding: 40px;
+    text-align: center;
+}
+
+.project {
+    background: #222;
+    padding: 20px;
+    margin: 10px auto;
+    width: 80%;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.project:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #111;
+    margin-top: 20px;
+}
