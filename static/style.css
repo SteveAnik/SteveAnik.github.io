@@ -1,68 +1,121 @@
-/* Dark Theme with Red, Dark Blue, and Dark Violet */
+/* Modern Cyber Security Theme */
+:root {
+    --dark-bg: #0a0a0f;
+    --neon-red: #ff003c;
+    --hacker-green: #00ff9d;
+    --cyber-blue: #00a3ff;
+    --matrix-green: #00ff55;
+    --terminal-text: #20c20e;
+    --cyber-gradient: linear-gradient(45deg, var(--neon-red), var(--cyber-blue));
+}
+
 body {
-    background: linear-gradient(to right, #0D0D0D, #1A1A2E, #16213E);
-    color: #EAEAEA;
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
+    background: var(--dark-bg);
+    color: #fff;
+    font-family: 'Courier New', monospace;
+    overflow-x: hidden;
 }
 
-header {
-    background: #111;
+/* Particle Background */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Cyber Glitch Effect */
+.logo-glitch {
+    position: relative;
+    font-size: 2rem;
+    color: var(--neon-red);
+    text-transform: uppercase;
+}
+
+.logo-glitch::before,
+.logo-glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.logo-glitch::before {
+    animation: glitch-1 2s infinite linear alternate-reverse;
+    color: var(--cyber-blue);
+    z-index: -1;
+}
+
+.logo-glitch::after {
+    animation: glitch-2 2s infinite linear alternate-reverse;
+    color: var(--hacker-green);
+    z-index: -2;
+}
+
+/* Terminal Window Effect */
+.terminal-window {
+    background: rgba(0, 0, 0, 0.9);
+    border: 1px solid var(--terminal-text);
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 255, 157, 0.2);
+}
+
+.terminal-body {
     padding: 20px;
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    font-family: 'Courier New', monospace;
+    color: var(--terminal-text);
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #FF004D;
+/* Cyber Button Styles */
+.cyber-button {
+    background: none;
+    border: 2px solid var(--neon-red);
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    position: relative;
+    transition: all 0.3s;
+    cursor: pointer;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
+.cyber-button:hover {
+    background: var(--neon-red);
+    box-shadow: 0 0 20px var(--neon-red);
+    transform: translateY(-2px);
 }
 
-nav ul li {
-    margin: 0 15px;
+/* Matrix Text Animation */
+@keyframes matrix-flow {
+    from { background-position: 0 0; }
+    to { background-position: 0 100%; }
 }
 
-nav ul li a {
-    color: #EAEAEA;
-    text-decoration: none;
-    transition: 0.3s;
+/* Project Card Hover Effect */
+.project-card {
+    perspective: 1000px;
+    transform-style: preserve-3d;
 }
 
-nav ul li a:hover {
-    color: #FF004D;
+.project-image {
+    transition: transform 0.6s;
 }
 
-section {
-    padding: 40px;
-    text-align: center;
+.project-card:hover .project-image {
+    transform: rotateX(10deg) rotateY(10deg);
 }
 
-.project {
-    background: #222;
-    padding: 20px;
-    margin: 10px auto;
-    width: 80%;
-    border-radius: 8px;
-    transition: transform 0.3s;
+/* Cyber Form Effects */
+.cyber-form input {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid var(--cyber-blue);
+    color: #fff;
+    transition: all 0.3s;
 }
 
-.project:hover {
-    transform: scale(1.05);
+.cyber-form input:focus {
+    border-bottom-color: var(--neon-red);
+    box-shadow: 0 0 15px var(--neon-red);
 }
 
-footer {
-    text-align: center;
-    padding: 10px;
-    background: #111;
-    margin-top: 20px;
-}
+/* Add more styles for animations, responsive design, and other elements */

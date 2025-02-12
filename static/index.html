@@ -3,52 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clifton Adhikari | Portfolio</title>
+    <title>Clifton Adhikari | Cyber Security Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="../static/style.css">
-    <script defer src="../static/script.js"></script>
 </head>
 <body>
-    <header>
-        <div class="logo">Clifton Adhikari</div>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+    
+    <!-- Floating Navigation -->
+    <header class="floating-header">
+        <div class="logo-glitch" data-text="CLIFTON_ADHIKARI">CLIFTON_ADHIKARI</div>
+        <nav class="hamburger-nav">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#hero" class="nav-link hover-underline">Home</a></li>
+                <li><a href="#about" class="nav-link hover-underline">About</a></li>
+                <li><a href="#projects" class="nav-link hover-underline">Projects</a></li>
+                <li><a href="#contact" class="nav-link hover-underline">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="hero">
-        <h1>Welcome to My Portfolio</h1>
-        <p>Cybersecurity & IT Enthusiast | Passion for Secure Systems</p>
-    </section>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <p>A cybersecurity student at Wichita State University with a passion for IT security and system administration.</p>
-    </section>
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Project 1</h3>
-            <p>A cybersecurity-related project you worked on.</p>
+    <!-- Hero Section -->
+    <section id="hero" class="parallax">
+        <div class="hero-content">
+            <h1 class="cyber-glitch" data-text="Cyber Sentinel">Cyber Sentinel</h1>
+            <div class="scrolling-text">
+                <span class="typewriter" data-words='["Security Architect", "Penetration Tester", "System Defender", "Cyber Warrior"]'></span>
+            </div>
+            <canvas class="hero-canvas"></canvas>
         </div>
-        <div class="project">
-            <h3>Project 2</h3>
-            <p>Another project showcasing your skills.</p>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
         </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: your.email@example.com</p>
-        <p>LinkedIn: <a href="#">Your LinkedIn</a></p>
+    <!-- About Section -->
+    <section id="about" class="reveal">
+        <div class="hexagon-grid">
+            <div class="hexagon"></div>
+            <div class="hexagon"></div>
+            <div class="hexagon"></div>
+        </div>
+        <div class="about-content">
+            <h2 class="section-title">About The Architect</h2>
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <span class="terminal-close"></span>
+                        <span class="terminal-minimize"></span>
+                        <span class="terminal-expand"></span>
+                    </div>
+                </div>
+                <div class="terminal-body">
+                    <p><span class="prompt">$ whoami</span></p>
+                    <p>> Cybersecurity Specialist @ Wichita State University</p>
+                    <p>> Certified Ethical Hacker (CEH)</p>
+                    <p>> CompTIA Security+ Professional</p>
+                    <p class="blinking-cursor">_</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <footer>
-        <p>&copy; 2025 Clifton Adhikari</p>
-    </footer>
+    <!-- Project Section -->
+    <section id="projects" class="reveal">
+        <h2 class="section-title">Cyber Operations</h2>
+        <div class="project-grid">
+            <!-- Project Cards -->
+            <div class="project-card">
+                <div class="project-image" style="background-image: url('https://source.unsplash.com/800x600/?hacking')">
+                    <div class="project-overlay">
+                        <h3>Network Fortification</h3>
+                        <p>Advanced firewall configuration</p>
+                        <button class="cyber-button">View Details <span class="arrow">→</span></button>
+                    </div>
+                </div>
+            </div>
+            <!-- More project cards... -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="reveal">
+        <div class="cyber-form-container">
+            <h2 class="section-title">Initiate Connection</h2>
+            <form class="cyber-form">
+                <div class="input-group">
+                    <input type="text" required>
+                    <label>Your Alias</label>
+                    <span class="highlight"></span>
+                </div>
+                <div class="input-group">
+                    <input type="email" required>
+                    <label>Encrypted Channel</label>
+                    <span class="highlight"></span>
+                </div>
+                <button class="cyber-button send-pulse">
+                    Transmit Message
+                    <span class="gradient-border"></span>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="../static/script.js"></script>
 </body>
 </html>
